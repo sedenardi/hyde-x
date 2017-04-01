@@ -56,6 +56,8 @@ paginate = 10
 
 [author]
     name = "Your Name"
+    # Link name to homepage, default false
+    linkHome = true
 
 [permalinks]
     # Optional. Change the permalink format for the 'post' content type.
@@ -83,6 +85,9 @@ paginate = 10
     # Default (if omitted) is false.
     hideReadingTime = false
 
+    # Hide copyright and attributes, default false
+    hideCopyright = true
+
     # Changes sidebar background and link/accent colours.
     # See below for more colour options.
     # This also works: "theme-base-08 layout-reverse", or just "layout-reverse".
@@ -103,11 +108,14 @@ paginate = 10
     # Default (if omitted) is "Blog".
     home = "Blog"
 
+    # Hide home top menu link, default false
+    hideHome = true
+
     # Metadata used to drive integrations.
     googleAnalytics = "Your Google Analytics tracking code"
     gravatarHash = "MD5 hash of your Gravatar email address"
 
-    # Sidebar social links, these must be full URLs.
+    # Sidebar social links, these must be full URLs. Email can be just address.
     github = ""
     bitbucket = ""
     stackOverflow = ""
@@ -116,6 +124,7 @@ paginate = 10
     facebook = ""
     twitter = ""
     youtube = ""
+    email = ""
 
     # Other social-like sidebar links
     rss = false  # switch to true to enable RSS icon link
@@ -127,6 +136,8 @@ paginate = 10
 Hyde-X provides 8 built-in colour themes by default, with the option to define more in your own custom CSS.
 
 ![Hyde-X theme classes](https://github.com/zyro/hyde-x/blob/master/images/theme-colours.png)
+
+** Additional dark theme available using `theme-base-00` **
 
 ### Tips
 
@@ -151,6 +162,12 @@ Hyde-X provides 8 built-in colour themes by default, with the option to define m
 * Paginated blog listing.
 * [FontAwesome](http://fortawesome.github.io/Font-Awesome) social links.
 * ...many other small layout tweaks!
+
+### Changes in this fork
+
+* Add ability to hide certain display elements
+* Use different fonts than the original Hyde theme
+* Add dark color scheme
 
 ### Attribution
 
