@@ -5,12 +5,16 @@
         <img src="https://www.gravatar.com/avatar/{{ .Site.Params.gravatarHash }}?s=200"
              alt="gravatar" title="{{ .Site.Author.name }}">
       {{ end }}
+      {{ if .Site.Author.linkHome }}<a href="/">{{ end }}
       <h1>{{ .Site.Author.name }}</h1>
+      {{ if .Site.Author.linkHome }}</a>{{ end }}
       {{ with .Site.Params.tagline }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
     </div>
 
     <ul class="sidebar-nav">
+      {{ if not .Site.Params.hideHome }}
       <li class="sidebar-nav-item"><a href="{{ "/" | absURL }}">{{ if isset .Site.Params "home"}}{{ .Site.Params.home }}{{ else }}Blog{{ end }}</a></li>
+      {{ end }}
       {{ range .Site.Menus.main }}
       <li class="sidebar-nav-item">{{ .Pre }}<a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
       {{end}}
