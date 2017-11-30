@@ -1,0 +1,7 @@
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:description" content="{{ htmlUnescape (substr .Summary 0 200) }}">
+<meta property="og:image" content="{{ "/twitter-card.png" | absURL }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="article:author" content="{{ .Site.Author.Name }}">

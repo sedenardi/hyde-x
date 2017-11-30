@@ -44,6 +44,7 @@
     ga('send', 'pageview');
   </script>
   {{ end }}
+  {{ partial "open-graph" . }}
   {{ partial "twitter-card" . }}
 </head>
 <body{{ with .Site.Params.theme }} class="{{ . }}"{{ end }}>
