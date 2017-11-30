@@ -1,0 +1,6 @@
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@{{- .Site.Params.twitter -}}">
+<meta name="twitter:creator" content="@{{- .Site.Params.twitter -}}">
+<meta name="twitter:title" content="{{- .Title -}}">
+<meta name="twitter:description" content="{{- htmlUnescape (substr .Summary 0 200) -}}">
+<meta name="twitter:image" content="{{ "/twitter-card.png" | absURL }}">
