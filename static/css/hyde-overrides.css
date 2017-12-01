@@ -18,3 +18,45 @@
   list-style: none;
   margin-bottom: 1rem;
 }
+
+.sidebar-nav-toggle {
+  cursor: pointer;
+}
+
+.sidebar-nav-toggle > .fa {
+  padding-left: .25rem;
+}
+
+.sidebar-nav-sub {
+  list-style: none;
+  padding-left: 0;
+  display: none;
+}
+
+.sidebar-nav-item .fa-caret-up {
+  display: none;
+}
+.sidebar-nav-item.open .fa-caret-up {
+  display: inline-block;
+}
+.sidebar-nav-item.open .fa-caret-down {
+  display: none;
+}
+.sidebar-nav-item.open .sidebar-nav-sub {
+  display: block;
+}
+
+@media (min-width: 48em) {
+  .sidebar-nav-toggle {
+    cursor: default;
+  }
+  .sidebar-nav-toggle:hover {
+    text-decoration: none;
+  }
+  .sidebar-nav-toggle > .fa {
+    display: none;
+  }
+  .sidebar-nav-sub {
+    padding-left: 1rem;
+  }
+}

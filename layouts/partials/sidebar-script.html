@@ -1,0 +1,20 @@
+<script>
+  (function() {
+    var toggle = function(event) {
+      var parent = event.target.parentElement;
+      var isOpen = parent.className.indexOf('open') > -1;
+      if (isOpen) {
+        parent.className = parent.className.replace(' open', '');
+      } else {
+        parent.className = parent.className + ' ' + 'open';
+      }
+    };
+
+    var toggleLinks = document.querySelectorAll('.sidebar-nav-toggle');
+    for (var i = 0; i < toggleLinks.length; i++) {
+      toggleLinks[i].addEventListener('click', function(event) {
+        toggle(event);
+      });
+    }
+  })();
+</script>
