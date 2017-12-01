@@ -30,7 +30,10 @@
 .sidebar-nav-sub {
   list-style: none;
   padding-left: 0;
-  display: none;
+  visibility: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
 }
 
 .sidebar-nav-item .fa-caret-up {
@@ -43,7 +46,9 @@
   display: none;
 }
 .sidebar-nav-item.open .sidebar-nav-sub {
-  display: block;
+  visibility: visible;
+  max-height: 500px;
+  transition: max-height 0.5s ease-in;
 }
 
 @media (min-width: 48em) {
@@ -53,10 +58,12 @@
   .sidebar-nav-toggle:hover {
     text-decoration: none;
   }
-  .sidebar-nav-toggle > .fa {
+  .sidebar-nav-toggle-item .fa, .sidebar-nav-toggle-item.open .fa {
     display: none;
   }
   .sidebar-nav-sub {
     padding-left: 1rem;
+    visibility: visible;
+    max-height: 500px;
   }
 }

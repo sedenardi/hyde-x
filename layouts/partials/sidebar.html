@@ -16,7 +16,7 @@
       {{ end }}
       {{ range .Site.Menus.main }}
       {{ if .HasChildren }}
-        <li class="sidebar-nav-item">
+        <li class="sidebar-nav-item sidebar-nav-toggle-item">
           <a class="sidebar-nav-toggle">
             {{ .Name }}
             <i class="fa fa-caret-down" aria-hidden="true"></i>
