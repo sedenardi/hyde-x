@@ -24,7 +24,7 @@
           </a>
           <ul class="sidebar-nav-sub">
           {{ range .Children }}
-            <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+            <li><a href="{{ .URL | absURL }}" target="_blank">{{ .Name }}</a></li>
           {{ end }}
           </ul>
         </li>
