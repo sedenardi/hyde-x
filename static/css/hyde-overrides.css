@@ -36,6 +36,8 @@
   overflow: hidden;
 }
 
+/* uncss:ignore start */
+
 .sidebar-nav-item .fa-caret-up {
   display: none;
 }
@@ -67,3 +69,5 @@
     max-height: 500px;
   }
 }
+
+/* uncss:ignore end */
